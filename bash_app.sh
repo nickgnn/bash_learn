@@ -75,3 +75,9 @@ echo "${val2:=20}"
 # В val3 останется 11
 echo "${val3:=22}"
 echo "================================================="
+# Command substitution
+echo "Command substitution:"
+echo "The first file in directory ${PWD} is $(ls | head -1)"
+echo "Все строки кроме первой (начиная со второй)"
+echo "$(ls -l | tail -n +2)"
+echo "================================================="
