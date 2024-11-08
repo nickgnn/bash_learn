@@ -81,3 +81,9 @@ echo "The first file in directory ${PWD} is $(ls | head -1)"
 echo "Все строки кроме первой (начиная со второй)"
 echo "$(ls -l | tail -n +2)"
 echo "================================================="
+# Arithmetic expansion
+echo "Arithmetic expansion:"
+
+echo "$(( 5*3/2 ))"
+echo "$(( (5**2+3)/2 ))"
+echo "================================================="
