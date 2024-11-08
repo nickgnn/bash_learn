@@ -9,7 +9,7 @@ default_app_name="Start_Learn_Bash"
 echo "App name is ${default_app_name} :)"
 echo ""
 
-int_var=55
+int_var=1
 
 # Создание массива
 #      0 1 2 3 4 5  6  7  8  9  10  11    12
@@ -106,3 +106,13 @@ rm -v log*
 echo "================================================="
 # Word splitting
 echo "Word splitting: is antipattern"
+echo "================================================="
+# Bash.30.Conditionals.Part 2
+echo "Bash.30.Conditionals.Part 2"
+if (( int_var > 0 )); then
+  echo "${int_var} is positive :)"
+elif (( int_var == 0 )); then
+  echo "${int_var} is zero"
+else
+  echo "${int_var} is negative :("
+fi
