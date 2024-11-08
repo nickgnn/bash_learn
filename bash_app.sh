@@ -63,3 +63,15 @@ echo "Tilde expansion:"
 var=~/foo
 echo "var is: ${var}"
 echo "================================================="
+# Parameter & variable expansion
+echo "Parameter & variable expansion:"
+
+val1=10
+val2=
+val3=11
+echo "${val1}"
+echo "${val2:=20}"
+
+# В val3 останется 11
+echo "${val3:=22}"
+echo "================================================="
