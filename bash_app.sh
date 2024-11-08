@@ -37,7 +37,23 @@ echo "All array is ${array[@]}"
 echo ""
 
 # Ввод текста
-echo "Введите новое имя приложения:"
-read new_app_name
+#echo "Введите новое имя приложения:"
+#read new_app_name
 
 echo "New App name is ${new_app_name} :)"
+echo "================================================="
+
+# Brace expansion
+echo "Brace expansion:"
+touch file1 file2 file3 file4 file5 file6 file7 file8
+
+echo {1..9}
+echo {a..e}
+echo {a..n}
+echo {a..z}
+
+# Показать все файлы
+ls -l file{1..8}
+# Удаление всех файлов
+rm -v file{1..8}
+echo "================================================="
