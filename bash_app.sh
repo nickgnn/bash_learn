@@ -104,3 +104,5 @@ ls log[c,b]
 # Удаление всех файлов
 rm -v log*
 echo "================================================="
+# Word splitting
+echo "Word splitting: is antipattern"
