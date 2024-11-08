@@ -87,3 +87,20 @@ echo "Arithmetic expansion:"
 echo "$(( 5*3/2 ))"
 echo "$(( (5**2+3)/2 ))"
 echo "================================================="
+# Filename expansion - * ? [..]
+echo "Filename expansion:"
+
+touch loga logb logc logd logdd
+
+# Любое количество символов после 'log'
+ls log*
+
+# Только один символ после 'log', поэтому logdd не попал в выборку
+ls log?
+
+# Перечень конкретных символов, которые могут идти после 'log'
+ls log[a,d]
+ls log[c,b]
+# Удаление всех файлов
+rm -v log*
+echo "================================================="
