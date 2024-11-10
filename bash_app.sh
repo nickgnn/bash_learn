@@ -9,7 +9,7 @@ default_app_name="Start_Learn_Bash"
 echo "App name is ${default_app_name} :)"
 echo ""
 
-int_var=55
+int_var=1
 
 # Создание массива
 #      0 1 2 3 4 5  6  7  8  9  10  11    12
@@ -57,12 +57,14 @@ ls -l file{1..8}
 # Удаление всех файлов
 rm -v file{1..8}
 echo "================================================="
+
 # Tilde expansion
 echo "Tilde expansion:"
 
 var=~/foo
 echo "var is: ${var}"
 echo "================================================="
+
 # Parameter & variable expansion
 echo "Parameter & variable expansion:"
 
@@ -75,18 +77,21 @@ echo "${val2:=20}"
 # В val3 останется 11
 echo "${val3:=22}"
 echo "================================================="
+
 # Command substitution
 echo "Command substitution:"
 echo "The first file in directory ${PWD} is $(ls | head -1)"
 echo "Все строки кроме первой (начиная со второй)"
 echo "$(ls -l | tail -n +2)"
 echo "================================================="
+
 # Arithmetic expansion
 echo "Arithmetic expansion:"
 
 echo "$(( 5*3/2 ))"
 echo "$(( (5**2+3)/2 ))"
 echo "================================================="
+
 # Filename expansion - * ? [..]
 echo "Filename expansion:"
 
@@ -104,5 +109,41 @@ ls log[c,b]
 # Удаление всех файлов
 rm -v log*
 echo "================================================="
+
 # Word splitting
 echo "Word splitting: is antipattern"
+echo "================================================="
+
+# Bash.30.Conditionals.Part 2
+echo "Bash.30.Conditionals.Part 2"
+if (( int_var > 0 )); then
+  echo "${int_var} is positive :)"
+elif (( int_var == 0 )); then
+  echo "${int_var} is zero"
+else
+  echo "${int_var} is negative :("
+fi
+echo "================================================="
+
+# Switch/Case
+echo "Switch/Case"
+
+#echo "Enter any program:"
+#read program
+program="install"
+
+case "${program}" in
+clean)
+  echo "Clean is invoked"
+  ;;
+build)
+  echo "Build is invoked"
+  ;;
+install)
+  echo "Install is invoked"
+  ;;
+*)
+  echo "${program} is not supported"
+  exit 2
+  ;;
+esac
