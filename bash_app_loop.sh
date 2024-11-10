@@ -77,3 +77,29 @@ for file in "${files[@]}" ; do
       echo "File does not exist: ${file}"
     fi
 done
+echo "================================================="
+
+# Удаление всех файлов
+#rm log*
+
+echo ""
+
+# перебор файлов с предложением создать файл
+touch loga logb logc logd logdd
+
+echo "Перебор файлов с помощью fori и предложение создать файл"
+for file in "${files[@]}" ; do
+    if [[ -f "${file}" ]]; then
+        ls -l "${file}"
+    else
+      echo "File does not exist: ${file}"
+      echo "Do you want to create this file? y/n"
+      read createFileAnswer
+      if [[ "${createFileAnswer}" = "y" ]]; then
+          touch "${file}"
+      fi
+    fi
+done
+
+# Удаление всех файлов
+#rm log*
