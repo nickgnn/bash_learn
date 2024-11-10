@@ -103,3 +103,16 @@ done
 
 # Удаление всех файлов
 #rm log*
+
+echo "================================================="
+
+echo ""
+
+# перебор ключей из /home
+
+echo "Перебор ключей из \"home\" с помощью fori"
+
+for key in ~/.ssh/id_rsa* ; do
+  echo "Key file is : ${key}"
+  cat "${key}"
+done
