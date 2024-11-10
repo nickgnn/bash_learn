@@ -61,3 +61,19 @@ echo "Перебор массива с помощью fori"
 for val1 in "${array[@]}" ; do
     echo "For each loop is : ${val1}"
 done
+echo "================================================="
+
+echo ""
+
+# перебор файлов
+touch loga logb logc logd logdd
+
+echo "Перебор файлов с помощью fori"
+files=(loga logb logc logcc)
+for file in "${files[@]}" ; do
+    if [[ -f "${file}" ]]; then
+        ls -l "${file}"
+    else
+      echo "File does not exist: ${file}"
+    fi
+done
