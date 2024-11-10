@@ -53,3 +53,11 @@ echo "4. ForEach"
 for val in {1..5} ; do
     echo "For each loop is : ${val}"
 done
+echo "================================================="
+
+echo ""
+
+echo "Перебор массива с помощью fori"
+for val1 in "${array[@]}" ; do
+    echo "For each loop is : ${val1}"
+done
