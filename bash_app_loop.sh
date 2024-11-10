@@ -24,3 +24,13 @@ until (( counter <= 0 )); do
 #  counter=$(( counter-1 )) # вариант с присваниванием и использованием Arithmetic expansion
   (( counter-- )) # вариант с декрементом
 done
+echo "================================================="
+
+echo ""
+
+# for
+echo "3. For"
+
+for (( i = 0; i < 5; i++ )); do
+  echo "Index value is : ${i}"
+done
