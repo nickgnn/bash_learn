@@ -44,3 +44,12 @@ echo "Перебор массива с помощью for"
 for (( i = 0; i < "${#array[@]}"; i++ )); do
   echo "Index value is : ${i}. Array value is : ${array[i]}"
 done
+echo "================================================="
+
+echo ""
+
+# fori
+echo "4. ForEach"
+for val in {1..5} ; do
+    echo "For each loop is : ${val}"
+done
