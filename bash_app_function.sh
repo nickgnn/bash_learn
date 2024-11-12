@@ -32,6 +32,14 @@ clean() {
       echo "Index: ${index}. Array el: ${arg}"
       (( index++ ))
   done
+
+  # exit status, по умолчанию 0
+  # return 3
 }
 
 clean program3 23 99 arg5
+
+# смотрим exit status
+echo ""
+echo "Отображение exit status"
+echo "clean function status is : $?"
