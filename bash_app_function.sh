@@ -33,11 +33,14 @@ clean() {
       (( index++ ))
   done
 
+  echo "VALUE_FROM_FUNCTION"
+
   # exit status, по умолчанию 0
   # return 3
 }
 
-clean program3 23 99 arg5
+result=$(clean program3 23 99 arg5)
+echo "Clean function result is : ${result}"
 
 # смотрим exit status
 echo ""
