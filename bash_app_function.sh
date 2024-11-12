@@ -14,6 +14,15 @@ echo "======================================================================="
 echo ""
 
 # Function with args
+
+############################
+# Cleanup working directory
+# Global:
+# - HOME
+# - PATH
+# Arguments:
+# - None
+############################
 clean() {
   echo "going to clean with args..."
   echo "function 1st arg is : $1"
