@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Script all argument $*"
+
 # Function
 cleanDir() {
   echo "going to cleanDir..."
